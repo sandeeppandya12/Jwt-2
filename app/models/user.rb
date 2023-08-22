@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+	has_one_attached :avatar
+
 	def generate_password_token!
 	 self.reset_password_token = generate_token
 	 self.reset_password_sent_at = Time.now.utc
