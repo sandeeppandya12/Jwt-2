@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   post "/change_password", to:"users#change_password"
   post "/forgot_password", to: "users#forgot_password"
   get "/index", to: "users#index"
+  post 'password/forgot', to: 'passwords#forgot'
+  post 'password/reset', to: 'passwords#reset'
 
 end
