@@ -26,19 +26,6 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   config.cache_classes = false
 
   # Do not eager load code on boot.

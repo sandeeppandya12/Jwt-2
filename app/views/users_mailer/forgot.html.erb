@@ -6,10 +6,10 @@
   <body>
     <h1>Welcome</h1>
     <p>
-      your email  is: <%= @user.login %>.<br>
+      your email  is: <%= @user.email %>.<br>
     </p>
     <p>
-      To change password to the site, just follow this link: <%= @url %>.
+      To change password to the site, just use this code: <%= @user.reset_password_token %>.
     </p>
     <p>Thanks for joining and have a great day!</p>
   </body>
