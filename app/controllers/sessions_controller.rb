@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   def signup
     user = User.new(email: params[:email], password: params[:password])
@@ -6,12 +8,11 @@ class SessionsController < ApplicationController
     if user.save
       # we encrypt user info using the pre-define methods in application controller
       token = encode_user_data({ user_data: user.id })
-
       # return to user
       render json: { user: user, token: token }
     else
       # render error message
-      render json: { message: "invalid credentials" }
+      render json: { message: 'invalid credentials' }
     end
   end
 
@@ -25,11 +26,11 @@ class SessionsController < ApplicationController
       token = encode_user_data({ user_data: @user.id })
       # return to user
       if @user.save
-          UsersMailer.with(user: @user).welcome_email.deliver_now
-          render json: {  user: @user, token: token }
+        UsersMailer.with(user: @user).welcome_email.deliver_now
+        render json: { user: @user, token: token }
       end
-      else
-      render json: { message: "invalid credentials" }
-      end
+    else
+      render json: { message: 'invalid credentials' }
     end
   end
+end

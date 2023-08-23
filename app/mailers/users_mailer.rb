@@ -13,13 +13,8 @@ class UsersMailer < ApplicationMailer
     @url  = 'http://localhost:3000/password/forgot'
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
-
-
   
 end
-
-
-
 
 	# def send_forgot_password
 	# 	@user= params[:user]

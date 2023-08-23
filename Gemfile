@@ -51,4 +51,7 @@ gem 'letter_opener'
 gem 'actionmailer'
 gem 'kaminari'
 gem 'jsonapi-serializer'
-
+gem "image_processing"
+gem 'rubocop-rails', require: false
+gem 'activeadmin'
+gem 'devise'
